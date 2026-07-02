@@ -295,7 +295,7 @@
 
             <rect x="20" y="1040" width="40" height="50" class="bg-gray" /><text x="40" y="1065" class="vert-txt txt-sm">手洗い</text>
             <rect x="20" y="1090" width="60" height="230" class="bg-white" />
-            <text x="50" y="1205" class="vert-txt-lg">ロッカ-コ-ナ-</text>
+            <text x="50" y="1205" class="vert-txt-lg">ロッカーコーナー</text>
             <rect x="90" y="1090" width="30" height="150" class="bg-gray" /><text x="105" y="1165" class="vert-txt txt-sm">ソファー</text>
 
             <text x="320" y="1020" class="txt-lg" data-txt="search-pc">検索コーナー</text>
@@ -350,6 +350,12 @@
                 text.textContent = '検索メニューを閉じる';
             }
         }
+.vertical-text {
+  writing-mode: vertical-rl; /* 縦書きの指定 */
+  -webkit-writing-mode: vertical-rl; /* Safari用の古い記述（念のため） */
+  
+  text-orientation: mixed; /* これを追加！ */
+}
 
         function selectRoute(targetId) {
             // 1. 全てのボタンの色を元に戻す
