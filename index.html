@@ -71,9 +71,24 @@
         .txt-sm { fill: #000; font-family: sans-serif; text-anchor: middle; dominant-baseline: central; font-size: 11px; }
         .txt-lg { fill: #000; font-family: sans-serif; text-anchor: middle; dominant-baseline: central; font-size: 16px; font-weight: bold; }
         
-        /* 縦書き文字用 */
-        .vert-txt { writing-mode: vertical-rl; text-anchor: middle; font-family: sans-serif; font-size: 13px; }
-        .vert-txt-lg { writing-mode: vertical-rl; text-anchor: middle; font-family: sans-serif; font-size: 18px; font-weight: bold; }
+      /* 縦書き文字用 */
+        .vert-txt { 
+            writing-mode: vertical-rl; 
+            text-orientation: mixed; /* 明示的にミックス（デフォルト）を指定 */
+            text-anchor: middle; 
+            /* Safari用にMac/iOSの標準日本語フォント（ヒラギノ）を優先指定 */
+            font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif; 
+            font-size: 13px; 
+        }
+        .vert-txt-lg { 
+            writing-mode: vertical-rl; 
+            text-orientation: mixed; /* 明示的にミックス（デフォルト）を指定 */
+            text-anchor: middle; 
+            /* Safari用にMac/iOSの標準日本語フォント（ヒラギノ）を優先指定 */
+            font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif; 
+            font-size: 18px; 
+            font-weight: bold; 
+        }
 
         /* ターゲット発光エフェクト */
         .target-glow {
